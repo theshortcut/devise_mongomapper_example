@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Devise") %></title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="flash">
+        <%- flash.each do |key, value| -%>
+          <div id="flash_<%= key %>"><%=h value %></div>
+        <%- end -%>
+      </div>
+
+      <p><%= link_to 'Home', root_path %></p>
+
+      <div id="user_login_box">
+        <% if user_signed_in? -%>
+          <%= current_user.email %> |
+          <%= link_to 'My info', edit_user_path %> |
+          <%= link_to 'Sign out', destroy_user_session_path %>
+        <% else -%>
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end -%>
+      </div>
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>

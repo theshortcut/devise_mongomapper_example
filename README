@@ -1,0 +1,17 @@
+== Device Template
+
+starting point for a rails app using MongoMapper and Devise
+
+== Dependencies
+
+* Runtime
+
+  * mongo_mapper for MongoDB ORM
+  * devise (using a fork currently since save(false) is not built in to mongo_mapper)
+  * patched rails 2.3.4 if running ruby 1.9 due to active_support message_verifier bug
+
+* Testing
+
+  * shoulda
+  * matchy
+  * factory_girl
