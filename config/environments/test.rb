@@ -32,3 +32,4 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 config.gem 'shoulda'
 config.gem 'factory_girl'
 config.gem 'jnunemaker-matchy', :lib => 'matchy'
+# config.gem 'mocha'

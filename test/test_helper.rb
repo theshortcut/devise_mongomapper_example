@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
+require File.expand_path(File.dirname(__FILE__) + "/support/mock_warden")
 
 class ActiveSupport::TestCase
   # clear out Mongo collections before tests
