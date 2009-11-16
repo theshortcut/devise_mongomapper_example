@@ -10,14 +10,15 @@ class User
   key :reset_password_token, String, :limit =>  20
   key :remember_token,       String, :limit =>  20
   key :remember_created_at,  Time
+  timestamps!
 
   devise :all, :except => :validatable
   
+  # Email regex used to validate email formats. Retrieved from authlogic.
   EMAIL_REGEX = /\A[\w\.%\+\-]+@(?:[A-Z0-9\-]+\.)+(?:[A-Z]{2,4}|museum|travel)\z/i
 
   validates_presence_of :email
-  # TODO validatable does not do uniqueness afaik so figure this out
-  # validates_uniqueness_of :email, :allow_blank => true
+  validates_uniqueness_of :email, :allow_blank => true
   validates_format_of :email, :with => EMAIL_REGEX, :allow_blank => true
 
   validates_presence_of :password, :if => :password_required?
