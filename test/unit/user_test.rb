@@ -24,8 +24,6 @@ class UserTest < ActiveSupport::TestCase
     setup do
       @user = Factory(:user)
     end
-
     should_change("the number of users", :by => 1) { User.count }
-
   end
 end
