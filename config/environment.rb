@@ -15,13 +15,11 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  # config.gem "bj"
-  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'warden'
-  config.gem 'devise'
-  config.gem 'mongo_mapper'
+  config.gem 'warden', :version => '>=0.6.0', :source => 'http://gemcutter.org'
+  config.gem 'devise', :version => '>=0.5.1', :source => 'http://gemcutter.org'
+  config.gem 'mongo_mapper', :version => '>=0.6.0', :source => 'http://gemcutter.org'
+  config.gem 'compass', :version => '>=0.8.17', :source => 'http://gemcutter.org'
+  config.gem 'haml', :version => '>=2.2.0'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -44,4 +42,3 @@ Rails::Initializer.run do |config|
 end
 
 DeviseMailer.sender = "test@example.com"
-MongoMapper.database = "devise_template-#{Rails.env}"

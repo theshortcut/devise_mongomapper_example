@@ -1,0 +1,16 @@
+- title 'Edit Your Info'
+%h2 Editing Your Info
+
+- form_for @user, :url => user_path do |f|
+  - field_set_tag 'Update my email' do
+    %p= f.text_field :email
+    %p= error_message_on @user, :email
+    %p= f.submit 'Update email'
+
+- form_for @user, :url => user_path do |f|
+  - field_set_tag 'Update my password' do
+    %p= f.password_field :password
+    %p= error_message_on @user, :password
+    %p= f.password_field :password_confirmation
+    %p= error_message_on @user, :password_confirmation
+    %p= f.submit 'Update password'
