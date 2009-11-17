@@ -3,12 +3,12 @@ development:
   database: devise_template-dev
   host: localhost
 
-development:
+test:
   adapter: mongodb
   database: devise_template-test
   host: localhost
 
-development:
+production:
   adapter: mongodb
   database: devise_template-prod
   host: localhost

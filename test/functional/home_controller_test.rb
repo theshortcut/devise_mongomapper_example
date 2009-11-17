@@ -1,10 +1,10 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   context "on GET to :index" do
     setup do
-      sign_in_as :user => Factory(:user)
-      mock_warden_for :user
       get :index
     end
 
