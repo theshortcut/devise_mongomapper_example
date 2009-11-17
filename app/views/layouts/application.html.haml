@@ -11,7 +11,7 @@
   %body{body_attributes}
     #container
       #header
-        %h1= link_to 'Devise', root_url
+        %h1= link_to 'Devise', root_path
       - flash.each do |key, value|
         %div{:id => "flash_#{key}"}= h value
       #content
