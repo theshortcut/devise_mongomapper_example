@@ -24,6 +24,7 @@ class UsersControllerTest < ActionController::TestCase
   context "on GET to :edit while signed in" do
     setup do
       @user = Factory(:user)
+      @user.confirm!
       sign_in @user
       get :edit
     end

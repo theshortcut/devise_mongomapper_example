@@ -1,6 +1,8 @@
 class User
   include MongoMapper::Document
 
+  timestamps!
+
   devise :all, :except => :validatable
   
   # Email regex used to validate email formats. Retrieved from authlogic.
