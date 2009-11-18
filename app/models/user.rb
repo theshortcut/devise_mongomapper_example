@@ -1,17 +1,6 @@
 class User
   include MongoMapper::Document
 
-  key :email,                String, :limit => 100
-  key :encrypted_password,   String, :limit =>  40
-  key :password_salt,        String, :limit =>  20
-  key :confirmation_token,   String, :limit =>  20
-  key :confirmed_at,         Time
-  key :confirmation_sent_at, Time
-  key :reset_password_token, String, :limit =>  20
-  key :remember_token,       String, :limit =>  20
-  key :remember_created_at,  Time
-  timestamps!
-
   devise :all, :except => :validatable
   
   # Email regex used to validate email formats. Retrieved from authlogic.
