@@ -17,7 +17,7 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem 'warden', :version => '>=0.6.1', :source => 'http://gemcutter.org'
   config.gem 'devise', :version => '>=0.5.3', :source => 'http://gemcutter.org'
-  config.gem 'mongo_mapper', :version => '>=0.6.0', :source => 'http://gemcutter.org'
+  config.gem 'mongo_mapper', :version => '>=0.6.1', :source => 'http://gemcutter.org'
   config.gem 'compass', :version => '>=0.8.17', :source => 'http://gemcutter.org'
   config.gem 'haml', :version => '>=2.2.0'
 
