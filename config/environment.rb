@@ -15,11 +15,10 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem 'warden', :version => '>=0.6.4', :source => 'http://gemcutter.org'
-  config.gem 'devise', :version => '>=0.6.2', :source => 'http://gemcutter.org'
-  config.gem 'mongo_mapper', :version => '>=0.6.4', :source => 'http://gemcutter.org'
-  config.gem 'compass', :version => '>=0.8.17', :source => 'http://gemcutter.org'
-  config.gem 'haml', :version => '>=2.2.14'
+  config.gem 'devise', :version => '=1.0.4'
+  config.gem 'mongo_mapper', :version => '=0.7.0'
+  config.gem 'compass', :version => '=0.8.17'
+  config.gem 'haml', :version => '=2.2.20'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

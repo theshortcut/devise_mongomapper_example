@@ -9,8 +9,13 @@
 
 - form_for @user, :url => user_path do |f|
   - field_set_tag 'Update my password' do
+    %p= f.label :current_password
+    %p= f.password_field :current_password
+    %p= error_message_on @user, :current_password
+    %p= f.label :password
     %p= f.password_field :password
     %p= error_message_on @user, :password
+    %p= f.label :password_confirmation
     %p= f.password_field :password_confirmation
     %p= error_message_on @user, :password_confirmation
     %p= f.submit 'Update password'

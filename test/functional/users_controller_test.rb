@@ -60,4 +60,18 @@ class UsersControllerTest < ActionController::TestCase
     end
 
   end
+
+  context 'on POST to :update with correct :current_password' do
+    setup do
+      @user = Factory(:user)
+      @user.confirm!
+      sign_in @user
+      put :update, :user => { :current_password => 'testing', :password => 'newpassword', :password_confirmation => 'newpassword' }
+    end
+
+    should 'change password' do
+      @user.valid_password?('testing').should be(false)
+      @user.valid_password?('newpassword').should be(true)
+    end
+  end
 end
